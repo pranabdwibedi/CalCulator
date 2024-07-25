@@ -58,24 +58,24 @@ let result = 0;
 
 
 let calculateresult = (operands) =>{
-    result = parseInt(operands[0]);
+    result = parseFloat(operands[0]);
     for(i = 0;i < operands.length;i++){
         if(operands[i] == "+" || operands[i] == "-" || operands[i] == "%" || operands[i] == "/" || operands[i] == "*"){
             switch(operands[i]){
                 case "+" :
-                    result = parseInt(result) + parseInt(operands[i+1]);
+                    result = parseFloat(result) + parseFloat(operands[i+1]);
                     break;
                 case "-" :
-                    result = parseInt(result) - parseInt(operands[i+1]);
+                    result = parseFloat(result) - parseFloat(operands[i+1]);
                     break;
                 case "*" :
-                    result = parseInt(result) * parseInt(operands[i+1]);
+                    result = parseFloat(result) * parseFloat(operands[i+1]);
                     break;
                 case "/" :
-                    result = parseInt(result) / parseInt(operands[i+1]);
+                    result = parseFloat(result) / parseFloat(operands[i+1]);
                     break;
                 case "%" :
-                    result = parseInt(result) % parseInt(operands[i+1]);
+                    result = parseFloat(result) % parseFloat(operands[i+1]);
                     break;
             }
         }
